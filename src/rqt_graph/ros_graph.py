@@ -376,7 +376,7 @@ class RosGraph(Plugin):
 
         try:
             fh = open(file_name, 'rb')
-            dotcode = fh.read()
+            dotcode = fh.read().decode('utf-8')
             fh.close()
         except IOError:
             return
